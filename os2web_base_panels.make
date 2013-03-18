@@ -23,7 +23,7 @@ projects[jcarousel][subdir] = "contrib"
 projects[jcarousel][version] = "2.6"
 
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.0"
+projects[features][version] = "2.0-beta1"
 
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
@@ -42,3 +42,6 @@ projects[strongarm][version] = "2.0"
 
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.5"
+
+projects[views_php][subdir] = "contrib"
+projects[views_php][version] = "1.x-dev"
