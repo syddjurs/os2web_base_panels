@@ -45,3 +45,6 @@ projects[views][version] = "3.5"
 
 projects[views_php][subdir] = "contrib"
 projects[views_php][version] = "1.x-dev"
+
+projects[views_slideshow][subdir] = "contrib"
+projects[views_slideshow][version] = "3.0"
