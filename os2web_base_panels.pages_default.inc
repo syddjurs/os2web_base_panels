@@ -34,7 +34,7 @@ function os2web_base_panels_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'contentpage' => 'contentpage',
+              'os2web_base_contentpage' => 'os2web_base_contentpage',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -78,7 +78,7 @@ function os2web_base_panels_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => 0,
       'formatter_settings' => array(
-        'slideshow_image_style' => 'medium-content',
+        'slideshow_image_style' => 'os2web_base_style_medium',
         'slideshow_link' => '',
         'slideshow_caption' => '',
         'slideshow_caption_link' => '',
@@ -90,13 +90,13 @@ function os2web_base_panels_default_page_manager_handlers() {
         'slideshow_pause' => 1,
         'slideshow_pager' => 'carousel',
         'slideshow_pager_image_style' => 'thumbnail-gallery',
-        'slideshow_carousel_image_style' => 'medium-content',
+        'slideshow_carousel_image_style' => 'os2web_base_style_medium',
         'slideshow_carousel_visible' => '3',
         'slideshow_carousel_scroll' => '1',
         'slideshow_carousel_speed' => '500',
         'slideshow_carousel_vertical' => 0,
         'slideshow_carousel_circular' => 0,
-        'image_style' => 'medium-content',
+        'image_style' => 'os2web_base_style_medium',
         'image_link' => '',
       ),
       'context' => 'argument_entity_id:node_1',
@@ -140,7 +140,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-3';
     $pane->panel = 'middle_center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_beskrivelse';
+    $pane->subtype = 'node:field_os2web_base_field_summary';
     $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
@@ -190,7 +190,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-5';
     $pane->panel = 'middle_right';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_additional_info';
+    $pane->subtype = 'node:field_os2web_base_field_add_info';
     $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
@@ -271,7 +271,7 @@ function os2web_base_panels_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'news' => 'news',
+              'os2web_base_news' => 'os2web_base_news',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -331,7 +331,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-8';
     $pane->panel = 'middle_right';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_additional_info';
+    $pane->subtype = 'node:field_os2web_base_field_add_info';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
