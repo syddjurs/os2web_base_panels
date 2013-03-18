@@ -964,7 +964,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-9';
     $pane->panel = 'top_left';
     $pane->type = 'views';
-    $pane->subtype = 'kulturnaut_events_lister';
+    $pane->subtype = 'os2web_kulturnaut_events_lists';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
