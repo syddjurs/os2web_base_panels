@@ -403,7 +403,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'flexible:sektionsforside';
+  $display->layout = 'flexible:os2web_base_panels_layout_secti';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -425,7 +425,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-9';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
-    $pane->subtype = 'aktuelt-panel_pane_1';
+    $pane->subtype = 'os2web_base_panels_view_current-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -460,7 +460,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => 'sektionsforside',
+    'body_classes_to_add' => 'os2web_base_panels_layout_secti',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -529,7 +529,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-10';
     $pane->panel = 'lead';
     $pane->type = 'views';
-    $pane->subtype = 'rotating_image_view';
+    $pane->subtype = 'os2web_base_panels_view_rotating';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -568,7 +568,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-11';
     $pane->panel = 'lead';
     $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -607,7 +607,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-12';
     $pane->panel = 'middle_top';
     $pane->type = 'views_panes';
-    $pane->subtype = 'newslist-panel_pane_3';
+    $pane->subtype = 'os2web_base_panels_view_newslist-panel_pane_3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -684,7 +684,7 @@ function os2web_base_panels_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'frontpage';
+  $page->name = 'os2web_base_panels_page_front';
   $page->task = 'page';
   $page->admin_title = 'Frontpage';
   $page->admin_description = 'Frontpage';
@@ -704,7 +704,7 @@ function os2web_base_panels_default_page_manager_pages() {
   $handler->api_version = 1;
   $handler->name = 'page_frontpage_panel_context';
   $handler->task = 'page';
-  $handler->subtask = 'frontpage';
+  $handler->subtask = 'os2web_base_panels_page_front';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
@@ -892,7 +892,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-7';
     $pane->panel = 'top_left';
     $pane->type = 'views';
-    $pane->subtype = 'rotating_image_view';
+    $pane->subtype = 'os2web_base_panels_view_rotating';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -928,7 +928,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-8';
     $pane->panel = 'top_left';
     $pane->type = 'views';
-    $pane->subtype = 'newslist';
+    $pane->subtype = 'os2web_base_panels_view_newslist';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -989,7 +989,7 @@ function os2web_base_panels_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-4 omega alpha newslist-panel',
+      'css_class' => 'grid-4 omega alpha os2web_base_panels_view_newslist-panel',
     );
     $pane->extras = array();
     $pane->position = 2;
@@ -1000,7 +1000,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-10';
     $pane->panel = 'top_right';
     $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1014,7 +1014,7 @@ function os2web_base_panels_default_page_manager_pages() {
       'panel_args' => 0,
       'link_to_view' => 0,
       'args' => '',
-      'url' => 'selvbetjening',
+      'url' => 'os2web_base_panels_view_selfserv',
       'display' => 'sb_block_forside',
       'override_title' => 1,
       'override_title_text' => '',
@@ -1033,7 +1033,7 @@ function os2web_base_panels_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['frontpage'] = $page;
+  $pages['os2web_base_panels_page_front'] = $page;
 
   return $pages;
 

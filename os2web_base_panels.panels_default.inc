@@ -13,7 +13,7 @@ function os2web_base_panels_default_panels_mini() {
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'andre_kommunale_websites';
+  $mini->name = 'os2web_base_panels_mini_otherweb';
   $mini->category = '';
   $mini->admin_title = 'Andre kommunale websites';
   $mini->admin_description = '';
@@ -57,12 +57,12 @@ function os2web_base_panels_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
-  $export['andre_kommunale_websites'] = $mini;
+  $export['os2web_base_panels_mini_otherweb'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'footer_menuer';
+  $mini->name = 'os2web_base_panels_mini_footer';
   $mini->category = '';
   $mini->admin_title = 'Footer menuer';
   $mini->admin_description = '';
@@ -159,7 +159,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-5';
     $pane->panel = 'center';
     $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -194,12 +194,12 @@ function os2web_base_panels_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-3';
   $mini->display = $display;
-  $export['footer_menuer'] = $mini;
+  $export['os2web_base_panels_mini_footer'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'mega_menu_borger';
+  $mini->name = 'os2web_base_panels_mega_citizen';
   $mini->category = '';
   $mini->admin_title = 'Mega Menu Borger';
   $mini->admin_description = '';
@@ -249,7 +249,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-7';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'megadd_news-panel_pane_1';
+    $pane->subtype = 'os2web_base_panels_view_meganews-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -274,7 +274,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -298,8 +298,8 @@ function os2web_base_panels_default_panels_mini() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'selvbetjening-borger',
-      'css_class' => 'grid-3 alpha omega selvbetjening-mega-width',
+      'css_id' => 'os2web_base_panels_view_selfserv-borger',
+      'css_class' => 'grid-3 alpha omega os2web_base_panels_view_selfserv-mega-width',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -309,63 +309,12 @@ function os2web_base_panels_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
-  $export['mega_menu_borger'] = $mini;
+  $export['os2web_base_panels_mega_citizen'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'mega_menu_erhverv';
-  $mini->category = '';
-  $mini->admin_title = 'Mega Menu Erhverv';
-  $mini->admin_description = '';
-  $mini->requiredcontexts = array();
-  $mini->contexts = array();
-  $mini->relationships = array();
-  $display = new panels_display();
-  $display->layout = 'omega_24_twocol_12_12';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-      'left' => NULL,
-      'right' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-9';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['left'][0] = 'new-9';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $mini->display = $display;
-  $export['mega_menu_erhverv'] = $mini;
-
-  $mini = new stdClass();
-  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
-  $mini->api_version = 1;
-  $mini->name = 'mega_menu_for_erhverv';
+  $mini->name = 'os2web_base_panels_mega_business';
   $mini->category = '';
   $mini->admin_title = 'Mega Menu Erhverv';
   $mini->admin_description = '';
@@ -436,7 +385,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-12';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'megadd_news-panel_pane_1';
+    $pane->subtype = 'os2web_base_panels_view_meganews-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -461,7 +410,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-13';
     $pane->panel = 'right';
     $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -485,8 +434,8 @@ function os2web_base_panels_default_panels_mini() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'selvbetjening-erhverv',
-      'css_class' => 'grid-3 alpha omega selvbetjening-mega-width',
+      'css_id' => 'os2web_base_panels_view_selfserv-erhverv',
+      'css_class' => 'grid-3 alpha omega os2web_base_panels_view_selfserv-mega-width',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -496,12 +445,12 @@ function os2web_base_panels_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
-  $export['mega_menu_for_erhverv'] = $mini;
+  $export['os2web_base_panels_mega_business'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'mega_menu_for_politik_og_planer';
+  $mini->name = 'os2web_base_panels_mega_politics';
   $mini->category = '';
   $mini->admin_title = 'Mega Menu Politik og planer';
   $mini->admin_description = '';
@@ -572,7 +521,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-16';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'megadd_news-panel_pane_1';
+    $pane->subtype = 'os2web_base_panels_view_meganews-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -597,7 +546,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->pid = 'new-17';
     $pane->panel = 'right';
     $pane->type = 'views';
-    $pane->subtype = 'selvbetjening';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -621,8 +570,8 @@ function os2web_base_panels_default_panels_mini() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'selvbetjening-politik',
-      'css_class' => 'grid-3 alpha omega selvbetjening-mega-width',
+      'css_id' => 'os2web_base_panels_view_selfserv-politik',
+      'css_class' => 'grid-3 alpha omega os2web_base_panels_view_selfserv-mega-width',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -632,58 +581,7 @@ function os2web_base_panels_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
-  $export['mega_menu_for_politik_og_planer'] = $mini;
-
-  $mini = new stdClass();
-  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
-  $mini->api_version = 1;
-  $mini->name = 'mega_menu_politikogplaner';
-  $mini->category = '';
-  $mini->admin_title = 'Mega Menu Politik og planer';
-  $mini->admin_description = '';
-  $mini->requiredcontexts = array();
-  $mini->contexts = array();
-  $mini->relationships = array();
-  $display = new panels_display();
-  $display->layout = 'omega_24_twocol_12_12';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-      'left' => NULL,
-      'right' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-18';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-10';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['left'][0] = 'new-18';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $mini->display = $display;
-  $export['mega_menu_politikogplaner'] = $mini;
+  $export['os2web_base_panels_mega_politics'] = $mini;
 
   return $export;
 }

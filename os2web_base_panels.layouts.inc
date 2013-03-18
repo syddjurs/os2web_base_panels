@@ -13,7 +13,7 @@ function os2web_base_panels_default_panels_layout() {
   $layout = new stdClass();
   $layout->disabled = FALSE; /* Edit this to true to make a default layout disabled initially */
   $layout->api_version = 1;
-  $layout->name = 'forside';
+  $layout->name = 'os2web_base_panels_layout_front';
   $layout->admin_title = 'Forside';
   $layout->admin_description = '';
   $layout->category = 'CMS Theme';
@@ -101,12 +101,12 @@ function os2web_base_panels_default_panels_layout() {
       ),
     ),
   );
-  $export['forside'] = $layout;
+  $export['os2web_base_panels_layout_front'] = $layout;
 
   $layout = new stdClass();
   $layout->disabled = FALSE; /* Edit this to true to make a default layout disabled initially */
   $layout->api_version = 1;
-  $layout->name = 'sektionsforside';
+  $layout->name = 'os2web_base_panels_layout_secti';
   $layout->admin_title = 'Sektionsforside';
   $layout->admin_description = '';
   $layout->category = 'CMS Theme';
@@ -185,7 +185,7 @@ function os2web_base_panels_default_panels_layout() {
       ),
     ),
   );
-  $export['sektionsforside'] = $layout;
+  $export['os2web_base_panels_layout_secti'] = $layout;
 
   return $export;
 }

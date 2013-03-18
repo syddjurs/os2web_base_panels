@@ -11,7 +11,7 @@ function os2web_base_panels_views_default_views() {
   $export = array();
 
   $view = new view;
-  $view->name = 'aktuelt';
+  $view->name = 'os2web_base_panels_view_current';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -144,7 +144,7 @@ function os2web_base_panels_views_default_views() {
   $handler->display->display_options['filters']['field_promoteto_tid']['vocabulary'] = 'forfrem_til';
   $handler->display->display_options['pane_category']['name'] = 'CMS Theme';
   $handler->display->display_options['pane_category']['weight'] = '0';
-  $translatables['aktuelt'] = array(
+  $translatables['os2web_base_panels_view_current'] = array(
     t('Master'),
     t('mere'),
     t('Udfør'),
@@ -160,10 +160,10 @@ function os2web_base_panels_views_default_views() {
     t('CMS Theme'),
     t('Aktuelt - Portalforside'),
   );
-  $export['aktuelt'] = $view;
+  $export['os2web_base_panels_view_current'] = $view;
 
   $view = new view;
-  $view->name = 'kle_lonks_boks';
+  $view->name = 'os2web_base_panels_view_kle_link';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -209,14 +209,14 @@ function os2web_base_panels_views_default_views() {
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
-    'kle' => 'kle',
+    'os2web_taxonomies_tax_kle' => 'os2web_taxonomies_tax_kle',
   );
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'kle' => 'kle',
+    'os2web_taxonomies_tax_kle' => 'os2web_taxonomies_tax_kle',
   );
   $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = TRUE;
   /* Kontekstuelt filter: Indhold: Nid */
@@ -237,12 +237,12 @@ function os2web_base_panels_views_default_views() {
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filterkriterie: Indhold: KL Emneord (field_termref_kle) */
-  $handler->display->display_options['filters']['field_termref_kle_tid']['id'] = 'field_termref_kle_tid';
-  $handler->display->display_options['filters']['field_termref_kle_tid']['table'] = 'field_data_field_termref_kle';
-  $handler->display->display_options['filters']['field_termref_kle_tid']['field'] = 'field_termref_kle_tid';
-  $handler->display->display_options['filters']['field_termref_kle_tid']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['field_termref_kle_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_termref_kle_tid']['vocabulary'] = 'kle';
+  $handler->display->display_options['filters']['field_termref_os2web_taxonomies_tax_kle_tid']['id'] = 'field_termref_os2web_taxonomies_tax_kle_tid';
+  $handler->display->display_options['filters']['field_termref_os2web_taxonomies_tax_kle_tid']['table'] = 'field_data_field_termref_os2web_taxonomies_tax_kle';
+  $handler->display->display_options['filters']['field_termref_os2web_taxonomies_tax_kle_tid']['field'] = 'field_termref_os2web_taxonomies_tax_kle_tid';
+  $handler->display->display_options['filters']['field_termref_os2web_taxonomies_tax_kle_tid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_termref_os2web_taxonomies_tax_kle_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_termref_os2web_taxonomies_tax_kle_tid']['vocabulary'] = 'os2web_taxonomies_tax_kle';
   /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -258,7 +258,7 @@ function os2web_base_panels_views_default_views() {
     'kontaktblok' => 'kontaktblok',
     'media' => 'media',
     'panel' => 'panel',
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
     'spotbox' => 'spotbox',
     'tema' => 'tema',
   );
@@ -273,7 +273,7 @@ return $field==1?true:false;';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'kle_links_boks');
-  $translatables['kle_lonks_boks'] = array(
+  $translatables['os2web_base_panels_view_kle_link'] = array(
     t('Master'),
     t('KLE Links boks'),
     t('mere'),
@@ -285,10 +285,10 @@ return $field==1?true:false;';
     t('Alle'),
     t('Block'),
   );
-  $export['kle_lonks_boks'] = $view;
+  $export['os2web_base_panels_view_kle_link'] = $view;
 
   $view = new view;
-  $view->name = 'megadd_news';
+  $view->name = 'os2web_base_panels_view_meganews';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -392,7 +392,7 @@ return $field==1?true:false;';
       'label' => 'Indhold: Portalkategori (field_site_structure)',
     ),
   );
-  $translatables['megadd_news'] = array(
+  $translatables['os2web_base_panels_view_meganews'] = array(
     t('Master'),
     t('Aktuelle emner'),
     t('mere'),
@@ -406,10 +406,10 @@ return $field==1?true:false;';
     t('Content pane'),
     t('View panes'),
   );
-  $export['megadd_news'] = $view;
+  $export['os2web_base_panels_view_meganews'] = $view;
 
   $view = new view;
-  $view->name = 'newslist';
+  $view->name = 'os2web_base_panels_view_newslist';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -897,7 +897,7 @@ return $field==1?true:false;';
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-  $translatables['newslist'] = array(
+  $translatables['os2web_base_panels_view_newslist'] = array(
     t('Master'),
     t('mere'),
     t('Udfør'),
@@ -930,10 +930,10 @@ return $field==1?true:false;';
 <div class="news-list-right"><p class="date">[created]</p><h3><a href="node/[nid]" title=[field_resume_long_1] >[field_resume_long_1]</a></h3></div>
 <div class="news-list-next"></div>'),
   );
-  $export['newslist'] = $view;
+  $export['os2web_base_panels_view_newslist'] = $view;
 
   $view = new view;
-  $view->name = 'redaktoer_info';
+  $view->name = 'os2web_base_panels_view_editor';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -1045,7 +1045,7 @@ return $field==1?true:false;';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['redaktoer_info'] = array(
+  $translatables['os2web_base_panels_view_editor'] = array(
     t('Master'),
     t('Redaktør info'),
     t('mere'),
@@ -1067,10 +1067,10 @@ return $field==1?true:false;';
     t('Alle'),
     t('Block'),
   );
-  $export['redaktoer_info'] = $view;
+  $export['os2web_base_panels_view_editor'] = $view;
 
   $view = new view;
-  $view->name = 'rotating_image_view';
+  $view->name = 'os2web_base_panels_view_rotating';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -1632,7 +1632,7 @@ return $field==1?true:false;';
     'rotating_image' => 'rotating_image',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  $translatables['rotating_image_view'] = array(
+  $translatables['os2web_base_panels_view_rotating'] = array(
     t('Master'),
     t('Rotating image view'),
     t('mere'),
@@ -1654,10 +1654,10 @@ return $field==1?true:false;';
     t('Har taksonomiterm'),
     t('Stor rotator - single2'),
   );
-  $export['rotating_image_view'] = $view;
+  $export['os2web_base_panels_view_rotating'] = $view;
 
   $view = new view;
-  $view->name = 'selvbetjening';
+  $view->name = 'os2web_base_panels_view_selfserv';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -1669,7 +1669,7 @@ return $field==1?true:false;';
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Selvbetjening';
-  $handler->display->display_options['css_class'] = 'selvbetjening';
+  $handler->display->display_options['css_class'] = 'os2web_base_panels_view_selfserv';
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1705,25 +1705,25 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_attached_node']['delta_limit'] = '3';
   $handler->display->display_options['fields']['field_attached_node']['delta_offset'] = '0';
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '[field_selvbetjening_direkte-value]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '[field_attached_node]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '[field_os2web_base_panels_view_selfserv_direkte-value]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '[field_attached_node]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['alt'] = '[title]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1759,7 +1759,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
   /* Filterkriterie: Indhold: Forfremmet til forside */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
@@ -1781,9 +1781,9 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  $handler->display->display_options['path'] = 'selvbetjening';
+  $handler->display->display_options['path'] = 'os2web_base_panels_view_selfserv';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed');
@@ -1803,9 +1803,9 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  $handler->display->display_options['path'] = 'selvbetjening.xml';
+  $handler->display->display_options['path'] = 'os2web_base_panels_view_selfserv.xml';
   $handler->display->display_options['displays'] = array(
     'default' => 'default',
     'page' => 'page',
@@ -1814,7 +1814,7 @@ return $field==1?true:false;';
   /* Display: SB-block-forside */
   $handler = $view->new_display('block', 'SB-block-forside', 'sb_block_forside');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'selvbetjening selvbetjening-block-forside';
+  $handler->display->display_options['css_class'] = 'os2web_base_panels_view_selfserv os2web_base_panels_view_selfserv-block-forside';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -1832,7 +1832,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = FALSE;
-  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/selvbetjening">Selvbetjening</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/os2web_base_panels_view_selfserv">Selvbetjening</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Sidefod: Global: View-område */
@@ -1840,13 +1840,13 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
   $handler->display->display_options['footer']['view']['empty'] = FALSE;
-  $handler->display->display_options['footer']['view']['view_to_insert'] = 'selvbetjening:sb_block_forside_att_1';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'os2web_base_panels_view_selfserv:sb_block_forside_att_1';
   /* Sidefod: Global: View-område */
   $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
   $handler->display->display_options['footer']['view_1']['empty'] = FALSE;
-  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'selvbetjening:sb_block_forside_att_2';
+  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'os2web_base_panels_view_selfserv:sb_block_forside_att_2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Felt: Spotboxe Bund */
   $handler->display->display_options['fields']['field_attached_node']['id'] = 'field_attached_node';
@@ -1861,25 +1861,25 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_attached_node']['delta_limit'] = '3';
   $handler->display->display_options['fields']['field_attached_node']['delta_offset'] = '0';
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '[field_selvbetjening_direkte-value]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '[field_attached_node]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '[field_os2web_base_panels_view_selfserv_direkte-value]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '[field_attached_node]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['alt'] = '[title]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1899,13 +1899,13 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'handling' => 'handling',
   );
   /* Filterkriterie: Indhold: Forfremmet til forside */
@@ -1914,10 +1914,10 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
 
-  /* Display: selvbetjening-megamenu */
-  $handler = $view->new_display('block', 'selvbetjening-megamenu', 'block_1');
+  /* Display: os2web_base_panels_view_selfserv-megamenu */
+  $handler = $view->new_display('block', 'os2web_base_panels_view_selfserv-megamenu', 'block_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'selvbetjening selvbetjening-megamenu';
+  $handler->display->display_options['css_class'] = 'os2web_base_panels_view_selfserv os2web_base_panels_view_selfserv-megamenu';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -1934,7 +1934,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = FALSE;
-  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/selvbetjening">Selvbetjening</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/os2web_base_panels_view_selfserv">Selvbetjening</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -1962,21 +1962,21 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '[title]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['path'] = '[field_selvbetjening_direkte-value]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['absolute'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alt'] = '[title]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="/[field_attached_node]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '[title]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte-value]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alt'] = '[title]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="/[field_attached_node]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Portalkategori (field_site_structure) */
   $handler->display->display_options['arguments']['field_site_structure_tid']['id'] = 'field_site_structure_tid';
@@ -2005,7 +2005,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
 
   /* Display: SB-block-forside-att-1 */
@@ -2045,18 +2045,18 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
   /* Filterkriterie: Indhold: Forfremmet til forside */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'emne' => 'emne',
   );
 
@@ -2117,14 +2117,14 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '<a href=[field_selvbetjening_direkte] title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '<a href=[field_os2web_base_panels_view_selfserv_direkte] title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -2139,18 +2139,18 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
   /* Filterkriterie: Indhold: Forfremmet til forside */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'liste' => 'liste',
   );
   $handler->display->display_options['block_description'] = 'Aktuelle genveje';
@@ -2158,7 +2158,7 @@ return $field==1?true:false;';
   /* Display: SB-block-portal */
   $handler = $view->new_display('block', 'SB-block-portal', 'block_2');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'selvbetjening selvbetjening-block-forside selvbetjening-block-portal';
+  $handler->display->display_options['css_class'] = 'os2web_base_panels_view_selfserv os2web_base_panels_view_selfserv-block-forside os2web_base_panels_view_selfserv-block-portal';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -2176,7 +2176,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = FALSE;
-  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/selvbetjening">Selvbetjening</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/os2web_base_panels_view_selfserv">Selvbetjening</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Sidefod: Global: View-område */
@@ -2184,14 +2184,14 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['view']['table'] = 'views';
   $handler->display->display_options['footer']['view']['field'] = 'view';
   $handler->display->display_options['footer']['view']['empty'] = FALSE;
-  $handler->display->display_options['footer']['view']['view_to_insert'] = 'selvbetjening:sb_block_portal_att_1';
+  $handler->display->display_options['footer']['view']['view_to_insert'] = 'os2web_base_panels_view_selfserv:sb_block_portal_att_1';
   $handler->display->display_options['footer']['view']['inherit_arguments'] = TRUE;
   /* Sidefod: Global: View-område */
   $handler->display->display_options['footer']['view_1']['id'] = 'view_1';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
   $handler->display->display_options['footer']['view_1']['empty'] = FALSE;
-  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'selvbetjening:sb_block_portal_att_2';
+  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'os2web_base_panels_view_selfserv:sb_block_portal_att_2';
   $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Felt: Spotboxe Bund */
@@ -2207,25 +2207,25 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_attached_node']['delta_limit'] = '3';
   $handler->display->display_options['fields']['field_attached_node']['delta_offset'] = '0';
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '[field_selvbetjening_direkte-value]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '[field_attached_node]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '[field_os2web_base_panels_view_selfserv_direkte-value]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '[field_attached_node]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['alt'] = '[title]';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '20';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
@@ -2266,13 +2266,13 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'handling' => 'handling',
     'emne' => 'emne',
   );
@@ -2314,24 +2314,24 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '<a href=[field_selvbetjening_direkte-value] title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['path'] = '[field_selvbetjening_direkte]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '<a href=[field_os2web_base_panels_view_selfserv_direkte-value] title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
@@ -2346,7 +2346,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
   /* Filterkriterie: Indhold: Forfremmet til forside */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
@@ -2384,25 +2384,25 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_attached_node']['delta_limit'] = '3';
   $handler->display->display_options['fields']['field_attached_node']['delta_offset'] = '0';
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '[field_selvbetjening_direkte-value]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '[field_attached_node]';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '[field_os2web_base_panels_view_selfserv_direkte-value]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '[field_attached_node]';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['alt'] = '[title]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -2436,13 +2436,13 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'emne' => 'emne',
   );
 
@@ -2495,22 +2495,22 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '<a href="[field_selvbetjening_direkte-value]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['settings'] = array(
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '<a href="[field_os2web_base_panels_view_selfserv_direkte-value]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['settings'] = array(
     'trim_length' => '600',
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -2540,13 +2540,13 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'liste' => 'liste',
   );
   $handler->display->display_options['block_description'] = 'Aktuelle genveje';
@@ -2554,7 +2554,7 @@ return $field==1?true:false;';
   /* Display: SB-block-sektion */
   $handler = $view->new_display('block', 'SB-block-sektion', 'block_4');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'selvbetjening selvbetjening-block-forside selvbetjening-block-portal selvbetjening-block-sektion';
+  $handler->display->display_options['css_class'] = 'os2web_base_panels_view_selfserv os2web_base_panels_view_selfserv-block-forside os2web_base_panels_view_selfserv-block-portal os2web_base_panels_view_selfserv-block-sektion';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -2571,7 +2571,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = FALSE;
-  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/selvbetjening">Selvbetjening</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3><a href="/os2web_base_panels_view_selfserv">Selvbetjening</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Sidefod: Global: View-område */
@@ -2579,7 +2579,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['view_1']['table'] = 'views';
   $handler->display->display_options['footer']['view_1']['field'] = 'view';
   $handler->display->display_options['footer']['view_1']['empty'] = FALSE;
-  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'selvbetjening:sb_block_portal_att_2';
+  $handler->display->display_options['footer']['view_1']['view_to_insert'] = 'os2web_base_panels_view_selfserv:sb_block_portal_att_2';
   $handler->display->display_options['footer']['view_1']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Felt: Spotboxe Bund */
@@ -2600,23 +2600,23 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '<a href="[field_selvbetjening_direkte-value]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty_zero'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '<a href="[field_os2web_base_panels_view_selfserv_direkte-value]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['type'] = 'text_plain';
   /* Felt: Global: Tilpasset tekst */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -2651,13 +2651,13 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'handling' => 'handling',
   );
 
@@ -2716,14 +2716,14 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '<a href="[field_selvbetjening_direkte-value]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '<a href="[field_os2web_base_panels_view_selfserv_direkte-value]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="[field_attached_node]" title="[title]">[title]</a>';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Portalkategori (field_site_structure) */
   $handler->display->display_options['arguments']['field_site_structure_tid']['id'] = 'field_site_structure_tid';
@@ -2751,23 +2751,23 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  /* Filterkriterie: Indhold: Type (field_selvbetjeningslink_type) */
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['id'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['table'] = 'field_data_field_selvbetjeningslink_type';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['field'] = 'field_selvbetjeningslink_type_value';
-  $handler->display->display_options['filters']['field_selvbetjeningslink_type_value']['value'] = array(
+  /* Filterkriterie: Indhold: Type (field_os2web_base_panels_view_selfservslink_type) */
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['id'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['table'] = 'field_data_field_os2web_base_panels_view_selfservslink_type';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['field'] = 'field_os2web_base_panels_view_selfservslink_type_value';
+  $handler->display->display_options['filters']['field_os2web_base_panels_view_selfservslink_type_value']['value'] = array(
     'liste' => 'liste',
   );
   $handler->display->display_options['block_description'] = 'Aktuelle genveje';
 
-  /* Display: selvbetjening-indholdsside */
-  $handler = $view->new_display('block', 'selvbetjening-indholdsside', 'block_6');
+  /* Display: os2web_base_panels_view_selfserv-indholdsside */
+  $handler = $view->new_display('block', 'os2web_base_panels_view_selfserv-indholdsside', 'block_6');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Selvbetjening';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'selvbetjening selvbetjening-indholdsside';
+  $handler->display->display_options['css_class'] = 'os2web_base_panels_view_selfserv os2web_base_panels_view_selfserv-indholdsside';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '0';
@@ -2785,7 +2785,7 @@ return $field==1?true:false;';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = FALSE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="blanketter"><a href="/selvbetjening">Blanketter / Selvbetjening</a></div>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="blanketter"><a href="/os2web_base_panels_view_selfserv">Blanketter / Selvbetjening</a></div>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['header']['area']['tokenize'] = 0;
   $handler->display->display_options['defaults']['footer'] = FALSE;
@@ -2838,7 +2838,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="node/[field_attached_node]" title="[title] ">[title]</a>';
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_selvbetjening_direkte]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[field_os2web_base_panels_view_selfserv_direkte]';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -2854,17 +2854,17 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Direkte link */
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['id'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['table'] = 'field_data_field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['field'] = 'field_selvbetjening_direkte';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['relationship'] = 'field_noderef_selvbtjn_nid';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['label'] = '';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['alter']['text'] = '<a href="[field_selvbetjening_direkte]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['empty'] = '<a href="[field_attached_node_1]" title="[title]">[title]</a>';
-  $handler->display->display_options['fields']['field_selvbetjening_direkte']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['id'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['table'] = 'field_data_field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['field'] = 'field_os2web_base_panels_view_selfserv_direkte';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['relationship'] = 'field_noderef_selvbtjn_nid';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['alter']['text'] = '<a href="[field_os2web_base_panels_view_selfserv_direkte]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['empty'] = '<a href="[field_attached_node_1]" title="[title]">[title]</a>';
+  $handler->display->display_options['fields']['field_os2web_base_panels_view_selfserv_direkte']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -2890,9 +2890,9 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['relationship'] = 'field_noderef_selvbtjn_nid';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'selvbetjeningslinks' => 'selvbetjeningslinks',
+    'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
   );
-  $translatables['selvbetjening'] = array(
+  $translatables['os2web_base_panels_view_selfserv'] = array(
     t('Master'),
     t('Selvbetjening'),
     t('mere'),
@@ -2905,16 +2905,16 @@ return $field==1?true:false;';
     t('- Alle -'),
     t('Forskydning'),
     t('node/[field_attached_node-nid]'),
-    t('[field_selvbetjening_direkte-value]'),
+    t('[field_os2web_base_panels_view_selfserv_direkte-value]'),
     t('[field_attached_node]'),
-    t('[field_selvbetjening_direkte]'),
+    t('[field_os2web_base_panels_view_selfserv_direkte]'),
     t('[title]'),
     t('Alle'),
     t('Page'),
     t('Feed'),
     t('SB-block-forside'),
-    t('<h3><a href="/selvbetjening">Selvbetjening</a></h3>'),
-    t('selvbetjening-megamenu'),
+    t('<h3><a href="/os2web_base_panels_view_selfserv">Selvbetjening</a></h3>'),
+    t('os2web_base_panels_view_selfserv-megamenu'),
     t('node/[field_attached_node]'),
     t('<a href="/[field_attached_node]" title="[title]">[title]</a>'),
     t('SB-block-forside-att-1'),
@@ -2923,31 +2923,31 @@ return $field==1?true:false;';
     t('Aktuelle Genvej'),
     t('<div class="aktuel-genvej>Aktuelle Genveje</div>'),
     t('<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>'),
-    t('<a href=[field_selvbetjening_direkte] title="[title]">[title]</a>'),
+    t('<a href=[field_os2web_base_panels_view_selfserv_direkte] title="[title]">[title]</a>'),
     t('<a href="[field_attached_node]" title="[title]">[title]</a>'),
     t('Aktuelle genveje'),
     t('SB-block-portal'),
     t('Selvbetjening - footerlinks'),
-    t('<a href=[field_selvbetjening_direkte-value] title="[title]">[title]</a>'),
+    t('<a href=[field_os2web_base_panels_view_selfserv_direkte-value] title="[title]">[title]</a>'),
     t('SB-block-portal-att-1'),
     t('SB-block-portal-att-2'),
     t('<div class="aktuel-genvej-portal">Aktuelle Genveje</div>'),
-    t('<a href="[field_selvbetjening_direkte-value]" title="[title]">[title]</a>'),
+    t('<a href="[field_os2web_base_panels_view_selfserv_direkte-value]" title="[title]">[title]</a>'),
     t('SB-block-sektion'),
     t('SB-block-sektion2'),
     t('<div class="aktuel-genvej-portal>Blanketter</div>'),
     t('<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706">Borger.dk</a><a class="virkdk" href="http://virk.dk">Virk.dk</a></div>'),
-    t('selvbetjening-indholdsside'),
-    t('<div class="blanketter"><a href="/selvbetjening">Blanketter / Selvbetjening</a></div>'),
+    t('os2web_base_panels_view_selfserv-indholdsside'),
+    t('<div class="blanketter"><a href="/os2web_base_panels_view_selfserv">Blanketter / Selvbetjening</a></div>'),
     t('field_noderef_selvbtjn'),
     t('<a href="node/[field_attached_node]" title="[title] ">[title]</a>'),
-    t('<a href="[field_selvbetjening_direkte]" title="[title]">[title]</a>'),
+    t('<a href="[field_os2web_base_panels_view_selfserv_direkte]" title="[title]">[title]</a>'),
     t('<a href="[field_attached_node_1]" title="[title]">[title]</a>'),
   );
-  $export['selvbetjening'] = $view;
+  $export['os2web_base_panels_view_selfserv'] = $view;
 
   $view = new view;
-  $view->name = 'sitestuktur';
+  $view->name = 'os2web_base_panels_view_sitestru';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
@@ -3067,7 +3067,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $translatables['sitestuktur'] = array(
+  $translatables['os2web_base_panels_view_sitestru'] = array(
     t('Master'),
     t('mere'),
     t('Udfør'),
@@ -3088,7 +3088,7 @@ return $field==1?true:false;';
     t('Logo - Erhverv'),
     t('Logo - Politik og planer'),
   );
-  $export['sitestuktur'] = $view;
+  $export['os2web_base_panels_view_sitestru'] = $view;
 
   return $export;
 }
