@@ -366,7 +366,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'news' => 'news',
+    'os2web_base_news' => 'os2web_base_news',
   );
   /* Filterkriterie: Indhold: Portalkategori (field_site_structure) */
   $handler->display->display_options['filters']['field_site_structure_tid']['id'] = 'field_site_structure_tid';
@@ -525,7 +525,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'news' => 'news',
+    'os2web_base_news' => 'os2web_base_news',
   );
 
   /* Display: Block */
