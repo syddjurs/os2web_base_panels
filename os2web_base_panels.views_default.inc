@@ -71,7 +71,7 @@ function os2web_base_panels_views_default_views() {
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['type'] = 'name';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['fail'] = 'ignore';
@@ -351,7 +351,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['type'] = 'convert';
   /* Filterkriterie: Indhold: Udgivet */
@@ -374,7 +374,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['field_os2web_base_field_struct_tid']['field'] = 'field_os2web_base_field_struct_tid';
   $handler->display->display_options['filters']['field_os2web_base_field_struct_tid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_os2web_base_field_struct_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_os2web_base_field_struct_tid']['vocabulary'] = 'site_struktur';
+  $handler->display->display_options['filters']['field_os2web_base_field_struct_tid']['vocabulary'] = 'os2web_base_tax_site_structure';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -503,7 +503,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -511,7 +511,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -659,14 +659,14 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['term_node_tid']['label'] = '';
   $handler->display->display_options['fields']['term_node_tid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
-    'site_struktur' => 0,
-    'acadremmcomittee' => 0,
-    'egennavne_stednavne' => 0,
-    'kle' => 0,
-    'organisation' => 0,
-    'politik' => 0,
-    'portalkategori' => 0,
-    'redaktoertags' => 0,
+    'os2web_base_tax_site_structure' => 0,
+    'os2web_taxonomies_tax_comittee' => 0,
+    'os2web_taxonomies_tax_places' => 0,
+    'os2web_taxonomies_tax_kle' => 0,
+    'os2web_taxonomies_tax_org' => 0,
+    'os2web_taxonomies_tax_politics' => 0,
+    'os2web_taxonomies_tax_portal_cat' => 0,
+    'os2web_taxonomies_tax_editor_tag' => 0,
     'sidevisning' => 0,
   );
   $handler->display->display_options['path'] = 'news';
@@ -1424,7 +1424,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -1611,7 +1611,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -1742,7 +1742,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'portalkategori' => 'portalkategori',
+    'os2web_taxonomies_tax_portal_cat' => 'os2web_taxonomies_tax_portal_cat',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -1989,7 +1989,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -2242,7 +2242,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['term_page'] = FALSE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -2250,7 +2250,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['validate']['fail'] = 'empty';
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -2418,7 +2418,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -2522,7 +2522,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'portalkategori' => 'portalkategori',
+    'os2web_taxonomies_tax_portal_cat' => 'os2web_taxonomies_tax_portal_cat',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -2633,7 +2633,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -2733,7 +2733,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
-    'portalkategori' => 'portalkategori',
+    'os2web_taxonomies_tax_portal_cat' => 'os2web_taxonomies_tax_portal_cat',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['format'] = 'default_summary';
@@ -3010,7 +3010,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['tid']['default_argument_options']['limit'] = TRUE;
   $handler->display->display_options['arguments']['tid']['default_argument_options']['vocabularies'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
@@ -3020,7 +3020,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'site_struktur' => 'site_struktur',
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
 
   /* Display: Logo */
