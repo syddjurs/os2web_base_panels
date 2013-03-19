@@ -1783,7 +1783,7 @@ return $field==1?true:false;';
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_base_selfservice_link' => 'os2web_base_selfservice_link',
   );
-  $handler->display->display_options['path'] = 'os2web_base_panels_view_selfserv';
+  $handler->display->display_options['path'] = 'selvbetjening';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed');
