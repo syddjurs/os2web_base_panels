@@ -2985,14 +2985,14 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
   /* Felt: Ord i ordforråd: Subsite logo */
-  $handler->display->display_options['fields']['field_subsite_logo']['id'] = 'field_subsite_logo';
-  $handler->display->display_options['fields']['field_subsite_logo']['table'] = 'field_data_field_subsite_logo';
-  $handler->display->display_options['fields']['field_subsite_logo']['field'] = 'field_subsite_logo';
-  $handler->display->display_options['fields']['field_subsite_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_subsite_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_subsite_logo']['empty'] = '[name]';
-  $handler->display->display_options['fields']['field_subsite_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_subsite_logo']['settings'] = array(
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['id'] = 'field_os2web_base_field_logo';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['table'] = 'field_data_field_os2web_base_field_logo';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['field'] = 'field_os2web_base_field_logo';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['empty'] = '[name]';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['settings'] = array(
     'image_style' => '',
     'image_link' => 'content',
   );
