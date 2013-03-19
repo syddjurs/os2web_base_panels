@@ -571,7 +571,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'd.m.y';
   /* Felt: Indhold: Resume - lang overskrift */
-  $handler->display->display_options['fieldsfield_os2web_base_field_summaryfield_resume_long_1']['id'] = 'field_os2web_base_field_summary_1';
+  $handler->display->display_options['fields']['field_os2web_base_field_summaryfield_resume_long_1']['id'] = 'field_os2web_base_field_summary_1';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['table'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['label'] = '';
