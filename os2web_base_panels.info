@@ -17,6 +17,7 @@ dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_php
 dependencies[] = views_slideshow
+dependencies[] = views_content
 datestamp = 1338117520
 features[ctools][] = delta:delta:3
 features[ctools][] = page_manager:pages_default:1
