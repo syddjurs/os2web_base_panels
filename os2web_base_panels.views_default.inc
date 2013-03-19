@@ -457,7 +457,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['settings'] = array(
-    'image_style' => 'news-cycle-small',
+    'image_style' => 'os2web_base_style_news_small',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['delta_offset'] = '0';
@@ -571,7 +571,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'd.m.y';
   /* Felt: Indhold: Resume - lang overskrift */
-  $handler->display->display_options['fields']['field_os2web_base_field_summaryfield_resume_long_1']['id'] = 'field_os2web_base_field_summary_1';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['id'] = 'field_os2web_base_field_summary_1';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['table'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['label'] = '';
@@ -619,7 +619,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['settings'] = array(
-    'image_style' => 'news-cycle-small',
+    'image_style' => 'os2web_base_style_news_small',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['delta_offset'] = '0';
@@ -704,7 +704,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['settings'] = array(
-    'image_style' => 'news-cycle-medium',
+    'image_style' => 'os2web_base_style_news_medium',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['delta_offset'] = '0';
@@ -779,7 +779,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['settings'] = array(
-    'image_style' => 'news-cycle-medium',
+    'image_style' => 'os2web_base_style_news_medium',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['delta_offset'] = '0';
@@ -855,7 +855,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['type'] = 'image_url';
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['settings'] = array(
-    'image_style' => 'news_big',
+    'image_style' => 'os2web_base_style_news_big',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['delta_offset'] = '0';
@@ -2985,14 +2985,14 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
   /* Felt: Ord i ordforråd: Subsite logo */
-  $handler->display->display_options['fields']['field_subsite_logo']['id'] = 'field_subsite_logo';
-  $handler->display->display_options['fields']['field_subsite_logo']['table'] = 'field_data_field_subsite_logo';
-  $handler->display->display_options['fields']['field_subsite_logo']['field'] = 'field_subsite_logo';
-  $handler->display->display_options['fields']['field_subsite_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_subsite_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_subsite_logo']['empty'] = '[name]';
-  $handler->display->display_options['fields']['field_subsite_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_subsite_logo']['settings'] = array(
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['id'] = 'field_os2web_base_field_logo';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['table'] = 'field_data_field_os2web_base_field_logo';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['field'] = 'field_os2web_base_field_logo';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['empty'] = '[name]';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_base_field_logo']['settings'] = array(
     'image_style' => '',
     'image_link' => 'content',
   );
