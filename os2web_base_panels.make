@@ -37,9 +37,6 @@ projects[panels][version] = "3.2"
 projects[menu_minipanels][subdir] = "contrib"
 projects[menu_minipanels][version] = "1.0-rc6"
 
-projects[strongarm][subdir] = "contrib"
-projects[strongarm][version] = "2.0"
-
 projects[views][subdir] = "contrib"
 projects[views][version] = "3.5"
 

@@ -634,7 +634,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-13';
     $pane->panel = 'middle_top';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_9';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_9';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -655,7 +655,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->pid = 'new-14';
     $pane->panel = 'middle_top';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_8';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_8';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -744,7 +744,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'bottom';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_2';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -770,7 +770,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'bottom';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_4';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -818,7 +818,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'bottom';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_5';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_5';
     $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
@@ -845,7 +845,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'bottom';
     $pane->type = 'views_panes';
-    $pane->subtype = 'spotboxe-panel_pane_3';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

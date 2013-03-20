@@ -259,7 +259,7 @@ function os2web_base_panels_views_default_views() {
     'media' => 'media',
     'panel' => 'panel',
     'os2web_base_panels_view_selfservslinks' => 'os2web_base_panels_view_selfservslinks',
-    'spotbox' => 'spotbox',
+    'os2web_spotbox_box' => 'os2web_spotbox_box',
     'tema' => 'tema',
   );
   /* Filterkriterie: Global: PHP */
