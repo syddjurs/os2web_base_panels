@@ -11,7 +11,7 @@ function os2web_base_panels_menu_default_menu_custom() {
   $menus = array();
 
   // Exported menu: menu-top-menu.
-  $menus['os2web_base_panels_menu_top_menu'] = array(
+  $menus['menu-top-menu'] = array(
     'menu_name' => 'menu-top-menu',
     'title' => 'Top menu',
     'description' => '',
