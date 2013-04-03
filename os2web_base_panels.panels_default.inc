@@ -89,7 +89,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => 'erhverv',
+        'field_os2web_base_field_struct_tid' => 'erhverv',
       ),
     );
     $pane->cache = array();
@@ -204,7 +204,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => 'borger',
+        'field_os2web_base_field_struct_tid' => 'borger',
       ),
     );
     $pane->cache = array();
@@ -340,7 +340,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => 'politik & planer',
+        'field_os2web_base_field_struct_tid' => 'politik & planer',
       ),
     );
     $pane->cache = array();
