@@ -640,8 +640,8 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_summary']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_base_field_summary']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_summary']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] ><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
-<div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_summary_1]</a></p></div>
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_2] >[field_os2web_base_field_lead_img]</a></div>
+<div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_2] >[field_os2web_base_field_summary_2]</a></p></div>
 <div class="news-list-next"></div>';
   $handler->display->display_options['fields']['field_os2web_base_field_summary']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
@@ -760,7 +760,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_lead_img]</a></div>
 <div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_summary_1]</a></p></div>
 <div class="news-list-next"></div>';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['element_label_colon'] = FALSE;
@@ -828,7 +828,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1] /></a></div>
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_lead_img]</a></div>
 <div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_summary_1]</a></p></div>
 <div class="news-list-next"></div>';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['element_label_colon'] = FALSE;
@@ -903,7 +903,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] ><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_lead_img]</a></div>
 <div class="news-list-right"><p class="date">[created]</p><h3><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_summary_1]</a></h3></div>
 <div class="news-list-next"></div>';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['element_label_colon'] = FALSE;
@@ -979,7 +979,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['field'] = 'field_os2web_base_field_summary';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] ><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_lead_img]</a></div>
 <div class="news-list-right"><p class="date">[created]</p><h3><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_summary_1]</a></h3></div>
 <div class="news-list-next"></div>';
   $handler->display->display_options['fields']['field_os2web_base_field_summary_1']['element_label_colon'] = FALSE;
@@ -1000,24 +1000,21 @@ return $field==1?true:false;';
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
-    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] ><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
-<div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_summary_1]</a></p></div>
+    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_2] >[field_os2web_base_field_lead_img]</a></div>
+<div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_2] >[field_os2web_base_field_summary_2]</a></p></div>
 <div class="news-list-next"></div>'),
     t('All'),
     t('Block'),
     t('more'),
     t('Page'),
-    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
+    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_lead_img]</a></div>
 <div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_summary_1]</a></p></div>
 <div class="news-list-next"></div>'),
     t('Newslist'),
     t('<img src=[field_os2web_base_field_lead_img]  alt=[field_os2web_base_field_summary_1]>'),
-    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1]><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1] /></a></div>
-<div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_1]>[field_os2web_base_field_summary_1]</a></p></div>
-<div class="news-list-next"></div>'),
     t('View panes'),
     t('Portalnews'),
-    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] ><img src=[field_os2web_base_field_lead_img] alt=[field_os2web_base_field_summary_1]/></a></div>
+    t('<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_lead_img]</a></div>
 <div class="news-list-right"><p class="date">[created]</p><h3><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_summary_1]</a></h3></div>
 <div class="news-list-next"></div>'),
     t('Portalnews-big'),

@@ -749,7 +749,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'nid' => '2539,2538',
+        'nid' => '2',
       ),
       'items_per_page' => '2',
     );

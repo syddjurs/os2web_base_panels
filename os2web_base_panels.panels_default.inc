@@ -38,36 +38,21 @@ function os2web_base_panels_default_panels_mini() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-8';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-9';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'os2web-menu-contentmenu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'menu_name' => 'os2web-menu-contentmenu',
+      'parent_mlid' => 'os2web-menu-contentmenu:508',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '2',
+      'follow' => 0,
+      'depth' => '1',
+      'expanded' => 0,
+      'sort' => 0,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -76,12 +61,12 @@ function os2web_base_panels_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_base_panels_view_meganews-panel_pane_1';
@@ -89,7 +74,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => 'erhverv',
+        'field_os2web_base_field_struct_tid' => 'erhverv',
       ),
     );
     $pane->cache = array();
@@ -103,10 +88,10 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['right'][0] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_selfserv';
@@ -139,8 +124,8 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][1] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -172,31 +157,37 @@ function os2web_base_panels_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-8';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'os2web-menu-contentmenu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'menu_name' => 'os2web-menu-contentmenu',
+      'parent_mlid' => 'os2web-menu-contentmenu:509',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '2',
+      'follow' => 0,
+      'depth' => 0,
+      'expanded' => 0,
+      'sort' => 0,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left'][0] = 'new-5';
+    $display->content['new-4'] = $pane;
+    $display->panels['left'][0] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_base_panels_view_meganews-panel_pane_1';
@@ -204,7 +195,7 @@ function os2web_base_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'field_site_structure_tid' => 'borger',
+        'field_os2web_base_field_struct_tid' => 'borger',
       ),
     );
     $pane->cache = array();
@@ -218,10 +209,10 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][0] = 'new-6';
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-6';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_selfserv';
@@ -254,8 +245,8 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][1] = 'new-7';
+    $display->content['new-6'] = $pane;
+    $display->panels['right'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -287,38 +278,23 @@ function os2web_base_panels_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-7';
     $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-8';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['left'][0] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-10';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'os2web-menu-contentmenu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'menu_name' => 'os2web-menu-contentmenu',
+      'parent_mlid' => 'os2web-menu-contentmenu:507',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '2',
+      'follow' => 0,
+      'depth' => 0,
+      'expanded' => 0,
+      'sort' => 0,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -327,12 +303,12 @@ function os2web_base_panels_default_panels_mini() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['left'][1] = 'new-9';
+    $display->content['new-7'] = $pane;
+    $display->panels['left'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_base_panels_view_meganews-panel_pane_1';
@@ -354,10 +330,10 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][0] = 'new-10';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-9';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_selfserv';
@@ -390,8 +366,8 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['right'][1] = 'new-11';
+    $display->content['new-9'] = $pane;
+    $display->panels['right'][1] = 'new-9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
@@ -421,80 +397,7 @@ function os2web_base_panels_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-8';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'grid-2 alpha',
-    );
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['center'][0] = 'new-12';
-    $pane = new stdClass();
-    $pane->pid = 'new-13';
-    $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-9';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'default',
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'grid-2',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['center'][1] = 'new-13';
-    $pane = new stdClass();
-    $pane->pid = 'new-14';
-    $pane->panel = 'center';
-    $pane->type = 'block';
-    $pane->subtype = 'menu_block-10';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'grid-2',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['center'][2] = 'new-14';
-    $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-10';
     $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_selfserv';
@@ -525,12 +428,12 @@ function os2web_base_panels_default_panels_mini() {
       'css_class' => 'grid-2 omega',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['center'][3] = 'new-15';
+    $display->content['new-10'] = $pane;
+    $display->panels['center'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-13';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['os2web_base_panels_mini_footer'] = $mini;
 
@@ -558,7 +461,7 @@ function os2web_base_panels_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-11';
     $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'nice_menus-1';
@@ -576,8 +479,8 @@ function os2web_base_panels_default_panels_mini() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['middle'][0] = 'new-16';
+    $display->content['new-11'] = $pane;
+    $display->panels['middle'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
