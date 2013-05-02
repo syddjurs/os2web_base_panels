@@ -13,7 +13,7 @@ function os2web_base_panels_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context';
+  $handler->name = 'os2web_base_panels_panel_content';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -238,12 +238,12 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['node_view_panel_context'] = $handler;
+  $export['os2web_base_panels_panel_content'] = $handler;
 
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context_2';
+  $handler->name = 'os2web_base_panels_panel_news';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -327,12 +327,12 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['node_view_panel_context_2'] = $handler;
+  $export['os2web_base_panels_panel_news'] = $handler;
 
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'term_view_panel_context_6';
+  $handler->name = 'os2web_base_panels_section_front';
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -413,12 +413,12 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['term_view_panel_context_6'] = $handler;
+  $export['os2web_base_panels_section_front'] = $handler;
 
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'term_view_panel_context_7';
+  $handler->name = 'os2web_base_panels_portal_front';
   $handler->task = 'term_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -631,7 +631,7 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export['term_view_panel_context_7'] = $handler;
+  $export['os2web_base_panels_portal_front'] = $handler;
 
   return $export;
 }
