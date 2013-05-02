@@ -45,19 +45,12 @@ function os2web_base_panels_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'balk_node';
+  $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'left' => NULL,
-      'right_top' => NULL,
-      'right_middle' => NULL,
-      'right_bottom' => NULL,
-      'lead' => NULL,
-      'middle_top' => NULL,
-      'middle_center' => NULL,
-      'middle_right' => NULL,
+      'center' => NULL,
     ),
   );
   $display->cache = array();
@@ -66,9 +59,9 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'lead';
+    $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_lead_image';
+    $pane->subtype = 'node:field_os2web_base_field_lead_img';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -112,13 +105,13 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['lead'][0] = 'new-1';
+    $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'middle_center';
+    $pane->panel = 'center';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
@@ -135,13 +128,13 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['middle_center'][0] = 'new-2';
+    $display->panels['center'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'middle_center';
+    $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_base_field_summary';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
@@ -163,10 +156,10 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['middle_center'][1] = 'new-3';
+    $display->panels['center'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'middle_center';
+    $pane->panel = 'center';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
     $pane->shown = FALSE;
@@ -185,10 +178,10 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['middle_center'][2] = 'new-4';
+    $display->panels['center'][3] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'middle_right';
+    $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_base_field_add_info';
     $pane->shown = FALSE;
@@ -213,10 +206,10 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['middle_right'][0] = 'new-5';
+    $display->panels['center'][4] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'middle_top';
+    $pane->panel = 'center';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
     $pane->shown = TRUE;
@@ -241,7 +234,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['middle_top'][0] = 'new-6';
+    $display->panels['center'][5] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -282,7 +275,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'balk_node';
+  $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -293,6 +286,7 @@ function os2web_base_panels_default_page_manager_handlers() {
       'middle_top' => NULL,
       'middle_center' => NULL,
       'middle_right' => NULL,
+      'center' => NULL,
     ),
   );
   $display->cache = array();
@@ -301,46 +295,21 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'middle_center';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'links' => 0,
-      'no_extras' => 0,
-      'override_title' => 0,
-      'override_title_text' => '',
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 0,
-      'build_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['middle_center'][0] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
-    $pane->panel = 'middle_right';
+    $pane->panel = 'center';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_base_field_add_info';
+    $pane->subtype = 'node:field_os2web_base_field_lead_img';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
+      'formatter' => 'image',
+      'delta_limit' => '0',
       'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'image_style' => 'os2web_base_style_medium',
+        'image_link' => '',
+      ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
       'override_title_text' => '',
@@ -353,8 +322,8 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['middle_right'][0] = 'new-8';
+    $display->content['new-7'] = $pane;
+    $display->panels['center'][0] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -413,7 +382,6 @@ function os2web_base_panels_default_page_manager_handlers() {
       'right_middle' => NULL,
       'right_bottom' => NULL,
       'center' => NULL,
-      'top' => NULL,
       'bund' => NULL,
     ),
   );
@@ -422,8 +390,8 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-9';
-    $pane->panel = 'top';
+    $pane->pid = 'new-8';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_base_panels_view_current-panel_pane_1';
     $pane->shown = TRUE;
@@ -440,8 +408,8 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['top'][0] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['center'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -504,21 +472,12 @@ function os2web_base_panels_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'balk_node';
+  $display->layout = 'flexible';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'left' => NULL,
-      'right_top' => NULL,
-      'right_middle' => NULL,
-      'right_bottom' => NULL,
-      'lead' => NULL,
-      'middle_top' => NULL,
-      'middle_center' => NULL,
-      'middle_right' => NULL,
       'center' => NULL,
-      'right_' => NULL,
     ),
   );
   $display->cache = array();
@@ -526,8 +485,8 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-10';
-    $pane->panel = 'lead';
+    $pane->pid = 'new-9';
+    $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_rotating';
     $pane->shown = TRUE;
@@ -562,11 +521,11 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['lead'][0] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['center'][0] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
-    $pane->panel = 'lead';
+    $pane->pid = 'new-10';
+    $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_selfserv';
     $pane->shown = TRUE;
@@ -601,11 +560,11 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['lead'][1] = 'new-11';
+    $display->content['new-10'] = $pane;
+    $display->panels['center'][1] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'middle_top';
+    $pane->pid = 'new-11';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_base_panels_view_newslist-panel_pane_3';
     $pane->shown = TRUE;
@@ -628,11 +587,11 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['middle_top'][0] = 'new-12';
+    $display->content['new-11'] = $pane;
+    $display->panels['center'][2] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
-    $pane->panel = 'middle_top';
+    $pane->pid = 'new-12';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_9';
     $pane->shown = TRUE;
@@ -649,11 +608,11 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['middle_top'][1] = 'new-13';
+    $display->content['new-12'] = $pane;
+    $display->panels['center'][3] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
-    $pane->panel = 'middle_top';
+    $pane->pid = 'new-13';
+    $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_8';
     $pane->shown = TRUE;
@@ -667,8 +626,8 @@ function os2web_base_panels_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['middle_top'][2] = 'new-14';
+    $display->content['new-13'] = $pane;
+    $display->panels['center'][4] = 'new-13';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
