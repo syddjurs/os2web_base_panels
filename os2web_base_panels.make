@@ -9,6 +9,16 @@ core = 7.x
 
 ; Libraries
 
+libraries[qtip][download][type] = "get"
+libraries[qtip][download][url] = "https://raw.github.com/bellcom/qTip1/master/1.0.0-rc3/jquery.qtip-1.0.0-rc3.min.js"
+libraries[qtip][directory_name] = "qtip"
+libraries[qtip][destination] = "libraries"
+
+libraries[jcarousel][download][type] = "get"
+libraries[jcarousel][download][url] = "http://sorgalla.com/projects/download-zip.php?jcarousel"
+libraries[jcarousel][directory_name] = "jquery.jcarousel"
+libraries[jcarousel][destination] = "libraries"
+
 ; Contrib modules
 
 ; Basic
