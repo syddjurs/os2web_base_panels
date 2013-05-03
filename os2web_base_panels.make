@@ -14,6 +14,11 @@ libraries[qtip][download][url] = "https://raw.github.com/bellcom/qTip1/master/1.
 libraries[qtip][directory_name] = "qtip"
 libraries[qtip][destination] = "libraries"
 
+libraries[jcarousel][download][type] = "get"
+libraries[jcarousel][download][url] = "http://sorgalla.com/projects/download-zip.php?jcarousel"
+libraries[jcarousel][directory_name] = "jquery.jcarousel"
+libraries[jcarousel][destination] = "libraries"
+
 ; Contrib modules
 
 ; Basic
