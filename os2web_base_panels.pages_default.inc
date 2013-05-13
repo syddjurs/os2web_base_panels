@@ -125,7 +125,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['center'][1] = 'new-2';
@@ -153,7 +153,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['center'][2] = 'new-3';
@@ -175,7 +175,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['center'][3] = 'new-4';
@@ -203,7 +203,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 4;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['center'][4] = 'new-5';
@@ -231,7 +231,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 5;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
     $display->panels['center'][5] = 'new-6';
@@ -708,9 +708,9 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'nid' => '2',
+        'nid' => '',
       ),
-      'items_per_page' => '2',
+      'items_per_page' => '0',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -718,7 +718,7 @@ function os2web_base_panels_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-3 alpha',
+      'css_class' => 'alpha omega',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -730,9 +730,31 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_4';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '3',
+      ),
+      'fields_override' => array(
+        'edit_node' => 1,
+        'field_os2web_spotbox_url' => 1,
+        'body' => 1,
+        'title_1' => 1,
+        'field_os2web_spotbox_image_tall' => 1,
+        'field_os2web_spotbox_lead_image' => 1,
+        'delta' => 1,
+        'title' => 1,
+        'field_os2web_spotbox_text' => 1,
+        'field_os2web_spotbox_ref_place' => 1,
+        'field_os2web_spotbox_promote_to' => 1,
+        'field_os2web_spotbox_ref_kle' => 1,
+        'field_os2web_spotbox_organizati' => 1,
+        'field_os2web_spotbox_politics' => 1,
+        'field_os2web_spotbox_sitestruct' => 1,
+        'field_os2web_spotbox_editor_tags' => 1,
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -751,7 +773,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Video',
@@ -805,12 +827,12 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_3';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'offset' => '2',
       'arguments' => array(
-        'nid' => '',
+        'nid' => '718/3',
       ),
     );
     $pane->cache = array();
@@ -876,7 +898,7 @@ function os2web_base_panels_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-8 alpha omega',
+      'css_class' => 'grid-8 alpha',
     );
     $pane->extras = array();
     $pane->position = 0;
@@ -912,7 +934,7 @@ function os2web_base_panels_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-4 alpha omega',
+      'css_class' => 'grid-4 alpha',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -948,7 +970,7 @@ function os2web_base_panels_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'grid-4 omega alpha os2web_base_panels_view_newslist-panel',
+      'css_class' => 'grid-4 os2web_base_panels_view_newslist-panel omega',
     );
     $pane->extras = array();
     $pane->position = 2;
