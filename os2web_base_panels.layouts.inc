@@ -89,7 +89,7 @@ function os2web_base_panels_default_panels_layout() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '3',
-        'class' => 'grid-4 omega alpha',
+        'class' => 'grid-4 omega',
       ),
       'left' => array(
         'type' => 'region',
@@ -97,7 +97,7 @@ function os2web_base_panels_default_panels_layout() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '3',
-        'class' => 'grid-8 alpha omega',
+        'class' => 'grid-8 alpha',
       ),
     ),
   );
