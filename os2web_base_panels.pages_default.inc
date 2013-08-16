@@ -694,6 +694,9 @@ function os2web_base_panels_default_page_manager_pages() {
       'right_' => NULL,
       'left' => NULL,
     ),
+    'right_' => array(
+      'style' => '-1',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -708,7 +711,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'nid' => '',
+        'nid' => '290236,290238',
       ),
       'items_per_page' => '0',
     );
@@ -729,30 +732,12 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
-    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_4';
-    $pane->shown = FALSE;
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_12';
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
         'nid' => '3',
-      ),
-      'fields_override' => array(
-        'edit_node' => 1,
-        'field_os2web_spotbox_url' => 1,
-        'body' => 1,
-        'title_1' => 1,
-        'field_os2web_spotbox_image_tall' => 1,
-        'field_os2web_spotbox_lead_image' => 1,
-        'delta' => 1,
-        'title' => 1,
-        'field_os2web_spotbox_text' => 1,
-        'field_os2web_spotbox_ref_place' => 1,
-        'field_os2web_spotbox_promote_to' => 1,
-        'field_os2web_spotbox_ref_kle' => 1,
-        'field_os2web_spotbox_organizati' => 1,
-        'field_os2web_spotbox_politics' => 1,
-        'field_os2web_spotbox_sitestruct' => 1,
-        'field_os2web_spotbox_editor_tags' => 1,
       ),
     );
     $pane->cache = array();
@@ -800,7 +785,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_5';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
@@ -827,12 +812,12 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_3';
-    $pane->shown = FALSE;
+    $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'offset' => '2',
       'arguments' => array(
-        'nid' => '718/3',
+        'nid' => '',
       ),
     );
     $pane->cache = array();
@@ -987,7 +972,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->configuration = array(
       'override_pager_settings' => 0,
       'use_pager' => 0,
-      'nodes_per_page' => '5',
+      'nodes_per_page' => '0',
       'pager_id' => '0',
       'offset' => '0',
       'more_link' => 0,
@@ -995,7 +980,7 @@ function os2web_base_panels_default_page_manager_pages() {
       'panel_args' => 0,
       'link_to_view' => 0,
       'args' => '',
-      'url' => 'os2web_base_panels_view_selfserv',
+      'url' => '',
       'display' => 'sb_block_forside',
       'override_title' => 1,
       'override_title_text' => '',
