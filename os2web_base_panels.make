@@ -15,7 +15,7 @@ libraries[qtip][directory_name] = "qtip"
 libraries[qtip][destination] = "libraries"
 
 libraries[jcarousel][download][type] = "get"
-libraries[jcarousel][download][url] = "http://sorgalla.com/projects/download-zip.php?jcarousel"
+libraries[jcarousel][download][url] = "https://github.com/jsor/jcarousel/archive/0.2.9.zip"
 libraries[jcarousel][directory_name] = "jquery.jcarousel"
 libraries[jcarousel][destination] = "libraries"
 
