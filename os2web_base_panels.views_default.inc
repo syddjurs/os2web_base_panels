@@ -1117,6 +1117,101 @@ return $field==1?true:false;';
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'rss_fields';
+  $handler->display->display_options['row_options']['title_field'] = 'title';
+  $handler->display->display_options['row_options']['link_field'] = 'url';
+  $handler->display->display_options['row_options']['description_field'] = 'body';
+  $handler->display->display_options['row_options']['creator_field'] = 'uid';
+  $handler->display->display_options['row_options']['date_field'] = 'created';
+  $handler->display->display_options['row_options']['guid_field_options'] = array(
+    'guid_field' => 'nid',
+    'guid_field_is_permalink' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Primære billede */
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['id'] = 'field_os2web_base_field_lead_img';
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['table'] = 'field_data_field_os2web_base_field_lead_img';
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['field'] = 'field_os2web_base_field_lead_img';
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['settings'] = array(
+    'image_style' => 'os2web_base_style_news_small',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_os2web_base_field_lead_img']['delta_offset'] = '0';
+  /* Felt: Indhold: Oprettelsesdato */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'd.m.y';
+  /* Felt: Indhold: Resume (maks 2 linier!) */
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['id'] = 'field_os2web_base_field_summary_2';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['table'] = 'field_data_field_os2web_base_field_summary';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['field'] = 'field_os2web_base_field_summary';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['alter']['max_length'] = '80';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_field_summary_2']['element_label_colon'] = FALSE;
+  /* Felt: Indhold: Resume (maks 2 linier!) */
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['id'] = 'field_os2web_base_field_summary';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['table'] = 'field_data_field_os2web_base_field_summary';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['field'] = 'field_os2web_base_field_summary';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['alter']['text'] = '<div class="news-list-left"><a href="node/[nid]" title=[field_os2web_base_field_summary_2] >[field_os2web_base_field_lead_img]</a></div>
+<div class="news-list-right"><p>[created]</p><p><a href="node/[nid]" title=[field_os2web_base_field_summary_2] >[field_os2web_base_field_summary_2]</a></p></div>
+<div class="news-list-next"></div>';
+  $handler->display->display_options['fields']['field_os2web_base_field_summary']['element_label_colon'] = FALSE;
+  /* Felt: Feeds item: Item URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'feeds_item';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  /* Felt: Indhold: Indhold */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_plain';
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Felt: Indhold: Forfatter uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'node';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  $handler->display->display_options['path'] = 'nyheder/feed/alle-nyheder';
   $translatables['os2web_base_panels_view_newslist'] = array(
     t('Master'),
     t('mere'),
@@ -1144,6 +1239,8 @@ return $field==1?true:false;';
 <div class="news-list-right"><p class="date">[created]</p><h3><a href="node/[nid]" title=[field_os2web_base_field_summary_1] >[field_os2web_base_field_summary_1]</a></h3></div>
 <div class="news-list-next"></div>'),
     t('Portalnews-big'),
+    t('Feed'),
+    t('Item URL'),
   );
   $export['os2web_base_panels_view_newslist'] = $view;
 
@@ -1256,8 +1353,7 @@ return $field==1?true:false;';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['text'] = '<a href="[field_os2web_base_field_rota_lnk]"><span>[title]</span> [body]</a>';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '155';
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['empty'] = '<a href="[field_os2web_base_field_rota_lnk]"><span>[title]</span></a>';

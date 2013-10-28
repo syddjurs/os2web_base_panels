@@ -733,7 +733,7 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_12';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
@@ -756,6 +756,42 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'center';
+    $pane->type = 'views';
+    $pane->subtype = 'os2web_hearings';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '3',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'grid-3',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['center'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'center';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = FALSE;
@@ -776,12 +812,12 @@ function os2web_base_panels_default_page_manager_pages() {
       'css_class' => 'grid-6 omega spotbox-row-video custom-video',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['center'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_5';
@@ -803,12 +839,12 @@ function os2web_base_panels_default_page_manager_pages() {
       'css_class' => 'grid-6 omega',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['center'][3] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['center'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_3';
@@ -829,12 +865,12 @@ function os2web_base_panels_default_page_manager_pages() {
       'css_class' => 'grid-6 omega',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['center'][4] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['center'][5] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'center';
     $pane->type = 'page_messages';
     $pane->subtype = 'page_messages';
@@ -850,12 +886,12 @@ function os2web_base_panels_default_page_manager_pages() {
       'css_class' => 'grid-8 alpha omega',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['center'][5] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['center'][6] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_rotating';
@@ -888,10 +924,10 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['left'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_newslist';
@@ -924,10 +960,10 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['left'][1] = 'new-8';
+    $display->content['new-9'] = $pane;
+    $display->panels['left'][1] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-10';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'os2web_kulturnaut_events_lists';
@@ -960,10 +996,10 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['left'][2] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['left'][2] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'right_';
     $pane->type = 'views';
     $pane->subtype = 'os2web_base_panels_view_selfserv';
@@ -993,8 +1029,8 @@ function os2web_base_panels_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right_'][0] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['right_'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
