@@ -2731,6 +2731,7 @@ return $field==1?true:false;';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['default_argument_options']['vocabularies'] = array(
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
     'os2web_taxonomies_tax_portal_cat' => 'os2web_taxonomies_tax_portal_cat',
   );
   $handler->display->display_options['arguments']['field_os2web_base_field_struct_tid']['summary']['number_of_records'] = '0';
