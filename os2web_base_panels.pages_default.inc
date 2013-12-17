@@ -499,7 +499,7 @@ function os2web_base_panels_default_page_manager_handlers() {
       'css_class' => 'grid-6 alpha',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
     $display->panels['center'][2] = 'new-10';
@@ -520,7 +520,7 @@ function os2web_base_panels_default_page_manager_handlers() {
       'css_class' => 'grid-3 alpha omega',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-11'] = $pane;
     $display->panels['center'][3] = 'new-11';
@@ -538,7 +538,7 @@ function os2web_base_panels_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 4;
     $pane->locks = array();
     $display->content['new-12'] = $pane;
     $display->panels['center'][4] = 'new-12';
@@ -632,6 +632,237 @@ function os2web_base_panels_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['os2web_base_panels_section_front'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'term_view_panel_context_4';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 9;
+  $handler->conf = array(
+    'title' => 'Taksonomiside',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'portal-side sektionsforside',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'Portalkategori',
+        'keyword' => 'taxonomy_vocabulary_2',
+        'name' => 'entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary',
+        'context' => 'argument_term_1',
+        'id' => 1,
+      ),
+    ),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'vids' => array(
+              11 => '11',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'os2web_3stack';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right_top' => NULL,
+      'right_middle' => NULL,
+      'right_bottom' => NULL,
+      'lead' => NULL,
+      'middle_top' => NULL,
+      'middle_center' => NULL,
+      'middle_right' => NULL,
+      'center' => NULL,
+      'right_' => NULL,
+      'stack1' => NULL,
+      'stack2' => NULL,
+      'stack3' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
+    $pane->panel = 'stack1';
+    $pane->type = 'views';
+    $pane->subtype = 'os2web_base_panels_view_rotating';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '4',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 1,
+      'link_to_view' => 0,
+      'args' => '%term:tid',
+      'url' => '',
+      'display' => 'block_1',
+      'context' => array(
+        0 => '',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'grid-6 omega',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['stack1'][0] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
+    $pane->panel = 'stack1';
+    $pane->type = 'views';
+    $pane->subtype = 'os2web_base_panels_view_selfserv';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '%term:tid',
+      'url' => '',
+      'display' => 'block_2',
+      'context' => array(
+        0 => 'argument_term_1.tid',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'grid-3 omega',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-15'] = $pane;
+    $display->panels['stack1'][1] = 'new-15';
+    $pane = new stdClass();
+    $pane->pid = 'new-16';
+    $pane->panel = 'stack2';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'os2web_base_panels_view_newslist-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'more_link' => 0,
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'override_title' => 1,
+      'override_title_text' => 'Aktuelt',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'grid-6 alpha ',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-16'] = $pane;
+    $display->panels['stack2'][0] = 'new-16';
+    $pane = new stdClass();
+    $pane->pid = 'new-17';
+    $pane->panel = 'stack2';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '1',
+      'offset' => '0',
+      'arguments' => array(
+        'field_os2web_spotbox_sitestruct_tid' => '%term:tid',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'spotbox-horisontal spotbox-fullwidth',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-17'] = $pane;
+    $display->panels['stack2'][1] = 'new-17';
+    $pane = new stdClass();
+    $pane->pid = 'new-18';
+    $pane->panel = 'stack3';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'os2web_spotbox_view_spots-panel_pane_4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '3',
+      'offset' => '1',
+      'arguments' => array(
+        'field_os2web_spotbox_sitestruct_tid' => '%term:tid',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'spotbox-horisontal spotbox-fullwidth',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-18'] = $pane;
+    $display->panels['stack3'][0] = 'new-18';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['term_view_panel_context_4'] = $handler;
 
   return $export;
 }
