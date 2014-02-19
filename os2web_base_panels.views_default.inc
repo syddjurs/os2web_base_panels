@@ -2290,7 +2290,7 @@ return $field==1?true:false;';
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="selbetjening-bund"><a class="nemid" href="https://www.nemid.nu/dk-da/privat/" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* Opførsel ved ingen resultater: Global: Unfiltered text */
@@ -3134,7 +3134,7 @@ return $field==1?true:false;';
     t('SB-block-forside-att-2'),
     t('Aktuelle Genvej'),
     t('<div class="aktuel-genvej>Aktuelle Genveje</div>'),
-    t('<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>'),
+    t('<div class="selbetjening-bund"><a class="nemid" href="https://www.nemid.nu/dk-da/privat/" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>'),
     t('<a href=[field_os2web_base_field_direct] title="[title]">[title]</a>'),
     t('<a href="[field_os2web_base_field_ref_node]" title="[title]">[title]</a>'),
     t('Aktuelle genveje'),
@@ -3144,6 +3144,7 @@ return $field==1?true:false;';
     t('SB-block-portal-att-1'),
     t('SB-block-portal-att-2'),
     t('<div class="aktuel-genvej-portal">Aktuelle Genveje</div>'),
+    t('<div class="selbetjening-bund"><a class="nemid" href="http://nemid.dk" title="NemID">NEMID</a><a class="borgerdk" href="https://www.borger.dk/Sider/default.aspx?KommuneId=706" title="Borger.dk">Borger.dk</a><a class="virkdk" href="http://virk.dk" title="Virk.dk">Virk.dk</a></div>'),
     t('<a href="[field_os2web_base_field_direct-value]" title="[title]">[title]</a>'),
     t('SB-block-sektion'),
     t('SB-block-sektion2'),
